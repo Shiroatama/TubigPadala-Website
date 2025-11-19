@@ -101,6 +101,16 @@
             padding: 2px 6px;
             border-radius: 3px;
         }
+        .badge {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
@@ -110,7 +120,7 @@
         <p>We're sorry to see you go. You can request account deletion at any time by following the instructions below.</p>
         
         <div class="warning">
-            <strong>⚠️ Warning:</strong> Account deletion is <strong>permanent and cannot be undone</strong>. Please ensure you have no unpaid orders before proceeding.
+            <strong>⚠️ Warning:</strong> Account deletion is <strong>permanent and cannot be undone</strong>. Please ensure you have no active orders before proceeding. Active orders will be automatically cancelled.
         </div>
         
         <h2>📋 What Gets Deleted</h2>
@@ -118,28 +128,62 @@
         <ul>
             <li><strong>Personal Information:</strong> Phone number, name, delivery address</li>
             <li><strong>Location Data:</strong> GPS coordinates and map locations</li>
-            <li><strong>Order History:</strong> All past and completed orders</li>
-            <li><strong>Delivery Photos:</strong> All uploaded delivery proof images</li>
             <li><strong>Push Notification Tokens:</strong> Device notification settings</li>
             <li><strong>App Preferences:</strong> Any saved settings or preferences</li>
+            <li><strong>Active Orders:</strong> All pending orders will be automatically cancelled</li>
         </ul>
+        
+        <h2>📦 What Happens to Your Orders</h2>
+        <div class="info-box">
+            <p><strong>Important:</strong> Your past orders will be <span class="highlight">anonymized</span>, not deleted.</p>
+            <ul>
+                <li>✅ <strong>Order records remain</strong> for supplier history and accounting purposes</li>
+                <li>✅ Your name will be changed to <strong>"Deleted User"</strong></li>
+                <li>✅ Your delivery address will be changed to <strong>"Address Removed"</strong></li>
+                <li>✅ Your phone number and GPS coordinates will be permanently deleted</li>
+                <li>✅ Suppliers will see "🗑️ Deleted User" label on your past orders</li>
+            </ul>
+        </div>
         
         <h2>📁 Data Retention Policy</h2>
-        <p>Some data may be temporarily retained for legal and accounting purposes:</p>
+        <p><strong>Immediate (Day 0):</strong></p>
         <ul>
-            <li><strong>Financial Records:</strong> Kept for 30 days (tax/accounting compliance)</li>
-            <li><strong>Unpaid Orders:</strong> Retained until payment is resolved</li>
+            <li>Your account is deleted and you cannot log in</li>
+            <li>All personal information is removed or anonymized</li>
+            <li>Active orders are automatically cancelled</li>
         </ul>
-        <p><small>After 30 days, all retained data is permanently deleted from our servers.</small></p>
         
-        <div class="info-box">
-            <strong>💡 Note:</strong> If you have <span class="highlight">unpaid orders</span>, please settle them before requesting account deletion. Accounts with outstanding balances may require additional verification.
-        </div>
+        <p><strong>Temporary Retention (Day 1-30):</strong></p>
+        <ul>
+            <li><strong>Anonymized Order Records:</strong> Kept for tax and accounting compliance</li>
+            <li><strong>Financial Records:</strong> Transaction history (amounts, dates, water types)</li>
+            <li><strong>No Personal Data:</strong> Only order metadata without your identity</li>
+        </ul>
+        
+        <p><strong>Permanent Deletion (After 30 Days):</strong></p>
+        <ul>
+            <li>All anonymized order records are permanently deleted</li>
+            <li>Deletion logs are archived</li>
+            <li>No trace of your account remains in our system</li>
+        </ul>
         
         <h2>📧 How to Delete Your Account</h2>
         
         <div class="steps">
-            <p><strong>Option 1: Email Request (Recommended)</strong></p>
+            <p><strong>Option 1: In-App Deletion (Recommended)</strong> <span class="badge">NOW AVAILABLE</span></p>
+            <ol>
+                <li>Open the TubigPadala app</li>
+                <li>Go to <strong>Profile</strong> tab</li>
+                <li>Scroll to the bottom and tap <strong>"Delete Account"</strong></li>
+                <li>Read the warning and tap <strong>"Delete Account"</strong> again</li>
+                <li>Enter your phone number to verify (exactly as shown)</li>
+                <li>Your account will be deleted immediately</li>
+            </ol>
+            <p><small><em>Note: You'll be logged out automatically after deletion.</em></small></p>
+        </div>
+        
+        <div class="steps">
+            <p><strong>Option 2: Email Request</strong></p>
             <ol>
                 <li>Click the button below to send a pre-filled email</li>
                 <li>Or manually email <strong>gabrielbreuyan@gmail.com</strong></li>
@@ -161,34 +205,36 @@
             </center>
         </div>
         
-        <div class="steps">
-            <p><strong>Option 2: In-App Deletion (Coming Soon)</strong></p>
-            <ol>
-                <li>Open the TubigPadala app</li>
-                <li>Go to <strong>Profile</strong> tab</li>
-                <li>Scroll to the bottom and tap <strong>"Delete Account"</strong></li>
-                <li>Confirm deletion in the popup dialog</li>
-                <li>Your account will be deleted immediately</li>
-            </ol>
-            <p><small><em>Note: In-app deletion feature will be available in a future update.</em></small></p>
-        </div>
-        
         <h2>❓ Frequently Asked Questions</h2>
         
         <p><strong>Q: Can I recover my account after deletion?</strong></p>
-        <p>A: No. Account deletion is permanent. You'll need to create a new account if you want to use TubigPadala again.</p>
+        <p>A: <strong>No.</strong> Account deletion is permanent. You'll need to create a new account if you want to use TubigPadala again.</p>
         
         <p><strong>Q: What happens to my active orders?</strong></p>
-        <p>A: Active orders must be completed or cancelled before account deletion. If you have active orders, please wait for delivery or cancel them first.</p>
+        <p>A: Active orders are <strong>automatically cancelled</strong> when you delete your account. You don't need to cancel them manually.</p>
         
         <p><strong>Q: Will suppliers still see my past orders?</strong></p>
-        <p>A: No. All order data is deleted, including supplier-side history.</p>
+        <p>A: <strong>Yes</strong>, but anonymized. Suppliers will see your past orders labeled as <strong>"🗑️ Deleted User"</strong> with your address showing as <strong>"Address Removed"</strong>. This is required for their business records and accounting.</p>
+        
+        <p><strong>Q: Why are my orders kept after deletion?</strong></p>
+        <p>A: For legal and tax compliance. Order records (without your personal information) are kept for 30 days, then permanently deleted. This protects both you and the supplier.</p>
         
         <p><strong>Q: How long does deletion take?</strong></p>
-        <p>A: Email requests are processed within 48 hours. In-app deletion (when available) is instant.</p>
+        <p>A: <strong>In-app deletion is instant.</strong> Email requests are processed within 48 hours.</p>
         
         <p><strong>Q: Can I delete someone else's account?</strong></p>
-        <p>A: No. We verify the phone number and name before processing any deletion request.</p>
+        <p>A: <strong>No.</strong> We verify the phone number and name before processing any deletion request.</p>
+        
+        <p><strong>Q: What if I have unpaid orders?</strong></p>
+        <p>A: Current implementation allows deletion regardless of payment status. However, we recommend settling any outstanding payments first to avoid disputes.</p>
+        
+        <p><strong>Q: Will my data really be deleted after 30 days?</strong></p>
+        <p>A: <strong>Yes.</strong> After 30 days, all anonymized order records are permanently deleted from our database. This is automated and irreversible.</p>
+        
+        <div class="info-box">
+            <p><strong>🔒 Privacy Guarantee:</strong></p>
+            <p>We take data privacy seriously. Your personal information (name, phone, address, GPS coordinates) is deleted <strong>immediately</strong> when you delete your account. Only anonymized order records (amounts, dates, water types) are temporarily kept for compliance, then permanently deleted after 30 days.</p>
+        </div>
         
         <div class="contact">
             <p><strong>Need Help?</strong></p>
